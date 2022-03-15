@@ -1,0 +1,64 @@
+<head>
+	<title>Vampire View</title>
+	<link href="style.css" rel="stylesheet">
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+	<div class = "form-row">
+		<div class = "form-group" style = "width: 33%; padding-left: 1%; padding-top: 1%;">
+			<label for = "nameBox">Name</label>
+			<input type = "text" class = "form-control" id = "nameBox" placeholder="Name">
+			<div class = "checkbox">
+				<label><input type = "checkbox" id = "shadowCheck">Shadow</label>
+			</div>
+			<div class = "checkbox">
+				<label><input type = "checkbox" id = "complexionCheck">Pale</label>
+			</div>
+
+			<div class = "checkbox">
+				<label><input type = "checkbox" id = "garlicCheck">Garlic</label>
+			</div>
+				<button type = "button" class = "btn btn-primary" onclick="addPerson()">Add classmate</button>
+
+		</div>
+	</div>
+	
+	<div class = "form-row" style = "padding-left: 1% !important;">
+		<table class = "table table-bordered table-condensed" id = "classmates">
+			<caption>Classmates</caption>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Shadow</th>
+					<th>Complexion</th>
+					<th>Garlic</th>
+					<th>Vampire</th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+	</div>
+
+	<div class = "form-row">
+		<div class = "form-group" style = "padding-left: 1%; width: 33%">
+			<label for="mySelect">Select Model Logic:</label>
+   	 		<select class="form-control" id="selectLogic" style = "margin-bottom: 15px">
+   	   			<option value='1'>Random Guess</option>
+   	   			<option value='2'>Threshold Based Method</option>
+   	   		</select>
+   			<button type = "button" class = "btn btn-primary" onClick = "model()">Calculate</button>
+   		</div>
+    </div>
+
+	<div>
+		<canvas id="piechart" style = "max-width: 500px; max-height: 300px;"></canvas>
+	</div>
+    <script type = "text/javascript" src = "style.js"></script>
+</body>
